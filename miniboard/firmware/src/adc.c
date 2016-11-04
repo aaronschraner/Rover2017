@@ -53,8 +53,8 @@ uint16_t adc_voltage(uint8_t channel, uint8_t reference){
 	
 	switch(reference){
 		case ADC_REF_RATIOMETRIC: return adc;
-		case ADC_REF_2V56:        return (adc * 2560) / 1024;
-		case ADC_REF_1V1:         return (adc * 1100) / 1024;
+		case ADC_REF_2V56:        return adc * 5 / 2;
+		case ADC_REF_1V1:         return adc * 15 / 14; //approx. 1100/1024
 		default: return adc;
 	}
 }

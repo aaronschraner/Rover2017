@@ -16,5 +16,6 @@
  * If the ADC_REF_RATIOMETRIC option is used, the returned value will range from
  * 0-1023, ratiometric with the supply voltage. (Useful for digitizing potentiometers.) */
 uint16_t adc_voltage(uint8_t channel, uint8_t reference);
+static uint16_t do_conversion(void);
 
 #endif
